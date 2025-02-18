@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Know Weather</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="Shortcut icon" href="WeatherIcon.jpg" type="image/jpg">
+    <script defer src="script.js"></script>
+    <script src="https://kit.fontawesome.com/da412b289c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Weather Webpage <i class="fa-solid fa-cloud"></i></h1>
+        
+        <div class="search-box">
+            <input type="text" id="City" placeholder="Enter your city">
+            <button id="but" onclick="getWeather()"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+        </div>
+
+        <div id="loading" class="hidden">Loading...</div>
+        <div id="weather-info"></div>
+    </div>
+</body>
+</html>
