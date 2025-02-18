@@ -80,3 +80,15 @@ button:hover {
 #weather-info p {
     margin: 8px 0;
 }
+@media only screen and (max-width: 768px) {
+    .search-bar input {
+        width: 60%;
+    }
+    .search-bar button {
+        width: 35%;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+}
