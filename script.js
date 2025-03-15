@@ -36,7 +36,7 @@ async function getWeather() {
         const { description } = currentData.weather[0];
         const windSpeed = currentData.wind.speed;
 
-        let forecastHTML = "<h3>📅 3-Day Forecast</h3><ul>";
+        let forecastHTML = "<h3>📅 Upcoming Forecast</h3><ul>";
 
         // Loop through forecast data (every 8th entry = approx 24 hours gap)
         for (let i = 0; i < forecastData.list.length; i += 8) {
