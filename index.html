@@ -3,25 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Know Weather</title>
+    <title>Know Weather | Smart Forecast</title>
     <link rel="stylesheet" href="style.css">
     <link rel="Shortcut icon" href="WeatherIcon.jpg" type="image/jpg">
     <script defer src="script.js"></script>
     <script src="https://kit.fontawesome.com/da412b289c.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="container">
-        <h1>Weather Webpage <i class="fa-solid fa-cloud"></i></h1>
-        
-        <div class="search-box">
-            <input type="text" id="City" placeholder="Enter your city">
-            <button id="but" onclick="getWeather()"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+
+    <div class="background-media">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <header class="app-header">
+        <nav class="nav-content">
+            <div class="brand"><i class="fa-solid fa-cloud-sun"></i> KnowWeather</div>
+            <div id="date-now" class="date-tag">Today</div>
+        </nav>
+    </header>
+
+    <main class="content-wrapper">
+        <section class="hero">
+            <h1>Weather Webpage <i class="fa-solid fa-cloud"></i></h1>
+            <p>Simple, real-time insights for your location.</p>
+            
+            <div class="search-container">
+                <input type="text" id="City" placeholder="Search city...">
+                <button id="but" onclick="getWeather()">
+                    <i class="fa-solid fa-location-dot"></i> <span>Check Forecast</span>
+                </button>
+            </div>
+        </section>
+
+        <div id="loading" class="hidden">
+            <div class="loader-dots"><span></span><span></span><span></span></div>
         </div>
 
-        <div id="loading" class="hidden">Loading...</div>
-        <div id="weather-info"></div>
-        <div id="forecast-info"></div>
+        <div class="results-layout">
+            <div id="weather-info"></div>
+            <div id="forecast-info"></div>
+        </div>
+    </main>
 
-    </div>
+    <footer class="app-footer">
+        <p>&copy; 2026 Know Weather | Minimalist Design</p>
+    </footer>
+
+    <script>
+        document.getElementById('date-now').innerText = new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric' });
+    </script>
 </body>
 </html>
